@@ -1,0 +1,8 @@
+com\cognizant\sportsEventMicroservice\entity\Sports.class
+com\cognizant\sportsEventMicroservice\service\SportsEventService.class
+com\cognizant\sportsEventMicroservice\repository\SportsRepository.class
+com\cognizant\sportsEventMicroservice\service\SportsEventServiceImpl.class
+com\cognizant\sportsEventMicroservice\repository\EventRepository.class
+com\cognizant\sportsEventMicroservice\entity\Event.class
+com\cognizant\sportsEventMicroservice\SportsEventMicroserviceApplication.class
+com\cognizant\sportsEventMicroservice\controller\SportsEventController.class
