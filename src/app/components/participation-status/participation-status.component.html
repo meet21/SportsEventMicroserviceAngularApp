@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div class="bootstrap-wrapper">
+    <div class="container mt text-center">
+        <a  mat-raised-button color="primary" class="mb" routerLink='/dashboard'>Main Menu</a>&nbsp;
+        <h1 class="text-center mt">Approved Participation List</h1>
+        <div class="row">
+<table id="customers">
+    
+    <thead>
+        <tr>
+            <th>Participation Id</th>
+            <th>Player Id</th>
+            <th>Player Name</th>
+            <th>Event Id</th>
+            <th>Event Name</th>
+            <th>Sports Id</th>
+            <th>Sports Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of participationarray">
+            <td>{{player.participationId}}</td>
+            <td>{{player.playerId}}</td>
+            <td>{{player.playerName}}</td>
+            <td>{{player.eventId}}</td>
+            <td>{{player.eventName}}</td>
+            <td>{{player.sportsId}}</td>
+            <td>{{player.sportsName}}</td>
+            <td>{{player.status}}</td>
+        </tr>  
+  </tbody>
+</table>
+<h3 class="text-center red">{{noDataDisplay}}</h3>
+</div>
+</div>
+</div>
+<hr>
+<div class="bootstrap-wrapper">
+    <div class="container mt text-center">
+        <h1 class="text-center mt">Decline Participation List</h1>
+        <div class="row">
+<table id="customers1">
+    
+    <thead>
+        <tr>
+            <th>Participation Id</th>
+            <th>Player Id</th>
+            <th>Player Name</th>
+            <th>Event Id</th>
+            <th>Event Name</th>
+            <th>Sports Id</th>
+            <th>Sports Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of participationdeclined">
+            <td>{{player.participationId}}</td>
+            <td>{{player.playerId}}</td>
+            <td>{{player.playerName}}</td>
+            <td>{{player.eventId}}</td>
+            <td>{{player.eventName}}</td>
+            <td>{{player.sportsId}}</td>
+            <td>{{player.sportsName}}</td>
+            <td>{{player.status}}</td>
+        </tr>  
+  </tbody>
+</table>
+<h3 class="text-center red">{{noDataDisplay1}}</h3>
+</div>
+</div>
+</div>
+<hr>
+<hr>
+<div class="bootstrap-wrapper">
+    <div class="container mt text-center">
+        <h1 class="text-center mt">Pending Participation List</h1>
+        <div class="row">
+<table id="cust1">
+    
+    <thead>
+        <tr>
+            <th>Participation Id</th>
+            <th>Player Id</th>
+            <th>Player Name</th>
+            <th>Event Id</th>
+            <th>Event Name</th>
+            <th>Sports Id</th>
+            <th>Sports Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of participationPending">
+            <td>{{player.participationId}}</td>
+            <td>{{player.playerId}}</td>
+            <td>{{player.playerName}}</td>
+            <td>{{player.eventId}}</td>
+            <td>{{player.eventName}}</td>
+            <td>{{player.sportsId}}</td>
+            <td>{{player.sportsName}}</td>
+            <td>{{player.status}}</td>
+        </tr>  
+  </tbody>
+</table>
+<h3 class="text-center red">{{noDataDisplay2}}</h3>
+</div>
+</div>
+</div>
+
+</body>
+</html>

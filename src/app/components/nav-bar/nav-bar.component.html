@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="title"><a routerLink="/">Sports Event Management System</a></span>
+      <span class="example-spacer"></span>
+      <a *ngIf="!loggedIn"mat-icon-button router="/login"> Login</a>
+      <button *ngIf="loggedIn" mat-icon-button color="accent">{{userNameDisplay}}</button>
+      <a *ngIf="loggedIn" mat-icon-button (click)="logoutUser()"> Logout</a>
+    </mat-toolbar-row>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h1 class="text-center mt">Participation List</h1>
+<div class="bootstrap-wrapper">
+    <div class="container mt">
+        <a  mat-raised-button color="primary" class="mb" routerLink='/dashboard'>Main Menu</a>&nbsp;
+        <a  mat-raised-button color="accent" class="mb"  routerLink='/addParticipation'>Add Participant</a>
+        <div class="row">
+<table id="customers">
+    
+    <thead>
+        <tr>
+            <th>Participation Id</th>
+            <th>Player Id</th>
+            <th>Player Name</th>
+            <th>Event Id</th>
+            <th>Event Name</th>
+            <th>Sports Id</th>
+            <th>Sports Name</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of participationarray">
+            <td>{{player.participationId}}</td>
+            <td>{{player.playerId}}</td>
+            <td>{{player.playerName}}</td>
+            <td>{{player.eventId}}</td>
+            <td>{{player.eventName}}</td>
+            <td>{{player.sportsId}}</td>
+            <td>{{player.sportsName}}</td>
+            <td>{{player.status}}</td>
+            <td>
+                <button type="button" [disabled]="player.disabled" mat-raised-button color="primary" (click)="approval(player,player.participationId)">Approve</button>&nbsp;&nbsp;
+                <button type="button" mat-raised-button color="accent" (click)="decline(player,player.participationId)">Decline</button>&nbsp;&nbsp;
+            </td>
+        </tr>  
+  </tbody>
+</table>
+<!-- <h3 class="text-center red">{{noDataDisplay}}</h3> -->
+</div>
+</div>
+</div>
+
+</body>
+</html>
